@@ -1,0 +1,23 @@
+{% extends "ita_car/layout.html" %}
+{% block title %}
+Interface de Efetuar Login
+{% endblock %}
+{% block content %}
+<h3>Interface para Efetuar Login/h3>
+<br>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form method="POST" class="efetuarLogin-form" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>Efetuar Login:</p>
+    <br>
+    <label>E-MAIL:</label> 
+    <input type="text" id="emailMotorista" name="emailMotorista"> 
+    <br>
+    <label>SENHA:</label> 
+    <input type="text" id="senhaMotorista" name="senhaMotorista"> 
+    <br>
+    <button type="submit" class="save btn btn-default">Entrar</button>
+</form>
+{% endblock %}

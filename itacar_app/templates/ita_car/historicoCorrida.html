@@ -1,0 +1,80 @@
+{% extends "ita_car/layout.html" %}
+{% block title %}
+Ver historico
+{% endblock %}
+{% block content %}
+<h3>Interface para ver historico de corridas<h3>
+<br>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+<body>
+
+    <div class="container">
+        <h1>Histórico de Corridas</h1>
+        <ul class="rides-list">
+            <li class="ride-item">
+                <div class="ride-details">
+                    <h2>Viagem 1</h2>
+                    <p>Data: 10 de março de 2023</p>
+                    <p>Origem: Rua A, 123</p>
+                    <p>Destino: Rua B, 456</p>
+                    <p>Valor: R$ 25,00</p>
+                </div>
+            </li>
+            <li class="ride-item">
+                <div class="ride-details">
+                    <h2>Viagem 2</h2>
+                    <p>Data: 15 de março de 2023</p>
+                    <p>Origem: Rua C, 789</p>
+                    <p>Destino: Rua D, 1011</p>
+                    <p>Valor: R$ 30,00</p>
+                </div>
+            </li>
+            <li class = "ride-item">
+            <div class="ride-details">
+                <h2> Viagem 3</h2>
+                <p>Data: 20 de julho de 2023</p>
+                <p>Origem: Rua Z, 7116</p>
+                <p>Destino: Rua X, 1011</p>
+                <p>Valor: R$ 23,75</p>
+            </div>
+            </li>
+        </ul>
+        <style>
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.rides-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ride-item {
+    background-color: #FF7000;
+    border: 1px solid #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.ride-details h2 {
+    margin-top: 0;
+}
+
+.ride-details p {
+    margin: 5px 0;
+}
+
+
+        </style>
+    </div>
+</body>
+{% endblock %}
